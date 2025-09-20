@@ -44,5 +44,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       langSwitch.href = safeHref;
       langSwitch.textContent = isNorsk ? "English" : "Norsk";
     }
-
+  }
 });
+
