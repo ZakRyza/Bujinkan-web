@@ -17,11 +17,12 @@
       ]
     },
     "thumbnail": {
-     "path": "../Pictures/Logo.webp",
+     "path": "Pictures/Logo.webp",
       "alt": {
         "no": "Officiel Bujinkan Logo",
         "en": "Official Bujinkan Logo"
       }
     }
   }
+
 ]
