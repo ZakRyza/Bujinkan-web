@@ -1,11 +1,32 @@
 /*jshint esversion: 6 */
-export function safeUrl(url) {
+// util.js
+export function safeUrl(input) {
+  if (!input) return "#";
+
+  // Hvis allerede absolut (http(s)://, //, data:, mailto:), returnér som erstatet URL
+  if (/^(https?:|\/\/|data:|mailto:)/i.test(input)) {
+    try { return new URL(input).href; } catch { return "#"; }
+  }
+
+  // Hvis starter med '/' => root-relative: origin + path
+  if (input.startsWith("/")) {
+    try { return location.origin + input; } catch { return "#"; }
+  }
+
+  // Ellers er det en relative sti (fx "Pictures/Oslo.webp" eller "./Pictures/...").
+  // Bestem repo-root: hvis pathname er /REPO/..., sæt base = origin + /REPO/
+  const segments = location.pathname.split("/").filter(Boolean); // fjerner tomme
+  const repoSegment = segments.length > 0 ? segments[0] : ""; // f.eks. "Bujinkan-web"
+  const base = repoSegment ? `${location.origin}/${repoSegment}/` : `${location.origin}/`;
+
   try {
-    const u = new URL(url, location.origin);
-    if (["http:", "https:"].includes(u.protocol)) return u.href;
-  } catch {}
-  return "#";
+    return new URL(input, base).href;
+  } catch (err) {
+    console.warn("safeUrl: kunne ikke opløse", input, "med base", base, err);
+    return "#";
+  }
 }
+
 export function esc(str) {
   return String(str)
     .replace(/&/g, "&amp;")
@@ -41,4 +62,5 @@ export async function safeFetchJson(url) {
     console.error("Kunne ikke hente JSON:", err);
     return null;
   }
+
 }
