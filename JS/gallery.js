@@ -6,6 +6,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   const prevBtn = document.querySelector(".prev");
   const nextBtn = document.querySelector(".next");
   const gallery = document.querySelector(".gallery");
+  const repo = "/" + location.pathname.split("/")[1] + "/";
+  // prepend repo-roden til relative stier
+  const fullPath = pic.src.startsWith("http")
+    ? pic.src
+    : repo + pic.src;
 
   if (lightbox && lightboxImg && prevBtn && nextBtn && gallery) {
     let pictures = [];
@@ -17,15 +22,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         // Find sprog
         const isNorsk = window.location.pathname.includes("/Norsk/");
         const lang = isNorsk ? "no" : "en";
-        const repo = "/" + location.pathname.split("/")[1] + "/";
 
         pictures.forEach((pic, index) => {
           const img = document.createElement("img");
-        
-          // prepend repo-roden til relative stier
-          const fullPath = pic.src.startsWith("http")
-            ? pic.src
-            : repo + pic.src;
         
           img.src = safeUrl(fullPath);
           img.alt = pic.alt[lang];
@@ -47,8 +46,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     function showImage() {
       const pic = pictures[currentIndex];
       lightbox.style.display = "flex";
-      lightboxImg.src = pic.src;
-      lightboxImg.alt = pic.alt.no; // evt. pic.alt[lang]
+      lightboxImg.src = safeUrl(fullPath);
+      lightboxImg.alt = pic.alt.[lang]; // evt. pic.alt[lang]
     }
 
     function showNext() {
@@ -83,4 +82,5 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
 });
+
 
