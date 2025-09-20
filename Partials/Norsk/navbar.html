@@ -1,0 +1,55 @@
+<!-- Navbar-->
+<nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
+  <div class="container-fluid">
+    <!--Hjem Logo-->
+    <a class="navbar-brand" href="../Norsk/Dojos.html" alt="Tilbake til Dojo skjerm">
+      <img class="hjemLogo" src="../Pictures/Logo.webp" alt="Bujinkan Logo" />
+    </a>
+
+    <!--Knap til højre ved lille skærm-->
+    <button
+      class="navbar-toggler shadow-none border-0"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasDarkNavbar"
+      aria-controls="offcanvasDarkNavbar"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--Sidebaren-->
+    <div
+      class="offcanvas offcanvas-end text-bg-dark sidebar"
+      tabindex="-1"
+      id="offcanvasDarkNavbar"
+      aria-labelledby="offcanvasDarkNavbarLabel">
+      <!--Sidebar Titel-->
+      <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Bujinkan</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <!--Links-->
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link" href="../Norsk/Dojos.html">Dojoer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Norsk/Om.html">Om Bujinkan</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../Norsk/Billeder.html">Bilder</a>
+          </li>
+          <li class="nav-item">
+            <a id="lang-switch" class="nav-link" href="#">English</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Norsk/Nyheter.html">Nyheter</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
