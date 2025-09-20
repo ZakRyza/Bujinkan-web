@@ -3,8 +3,8 @@ import { loadPartial, safeFetchJson, safeUrl, withRepo } from "./util.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   const isNorsk = window.location.pathname.includes("/Norsk/");
-  const headerPath = isNorsk ? "../Partials/Norsk/navbar.html" : "../Partials/Engelsk/navbar.html";
-  const footerPath = isNorsk ? "../Partials/Norsk/footer.html" : "../Partials/Engelsk/footer.html";
+  const headerPath = isNorsk ? withRepo("Partials/Norsk/navbar.html") : withRepo("Partials/Engelsk/navbar.html");
+  const footerPath = isNorsk ? withRepo("Partials/Norsk/footer.html") : withRepo("Partials/Engelsk/footer.html");
   await loadPartial(headerPath, "header");
   await loadPartial(footerPath, "footer");
   const normalise = (p) => p.replace(/\/$/, "");
