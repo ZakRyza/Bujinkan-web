@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (langSwitch) {
     const mapping = {
       [repo + "/Norsk/Dojos.html"]: [repo + "/Engelsk/Dojos.html"],
-      [repo + "/Norsk/Om.html": [repo + "/Engelsk/About.html"],
+      [repo + "/Norsk/Om.html"]: [repo + "/Engelsk/About.html"],
       [repo + "/Norsk/Kontakt.html"]: [repo + "/Engelsk/Contact.html"],
       [repo + "/Norsk/Billeder.html"]: [repo + "/Engelsk/Pictures.html"],
       [repo + "/Norsk/Nyheter.html"]: [repo + "/Engelsk/News.html"],
@@ -47,3 +47,4 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
 });
+
