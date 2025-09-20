@@ -12,7 +12,7 @@ if (dojoSelector) {
 }
 document.addEventListener("DOMContentLoaded", async () => {
     try {
-        const dojos = await safeFetchJson("../Assets/dojos.json");
+        const dojos = await safeFetchJson("../Assets/dojo-list.json");
         if (dojos) {
             const container = document.getElementById("dojo-list");
             const isNorsk = window.location.pathname.includes("/Norsk/");
