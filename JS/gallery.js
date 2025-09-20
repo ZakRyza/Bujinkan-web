@@ -1,5 +1,5 @@
 /*jshint esversion: 6 */
-import { safeFetchJson } from "./util.js";
+import { safeFetchJson, safeUrl } from "./util.js";
 document.addEventListener("DOMContentLoaded", async () => {
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
@@ -83,3 +83,4 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
 });
+
