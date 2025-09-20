@@ -1,15 +1,6 @@
 /*jshint esversion: 6 */
-import { esc, safeFetchJson, safeUrl, getRepoRoot, getLang, withRepo } from "./util.js";
+import { esc, safeFetchJson, safeUrl, getRepoRoot, getLang, withRepo, renderSocialLinksAsString } from "./util.js";
 
-const dojoSelector = document.getElementById("dojoSelector");
-if (dojoSelector) {
-  document.getElementById("dojoSelector").addEventListener("change", function () {
-    const target = this.value;
-    if (target) {
-      window.location.hash = target; // scroller til sektionen
-    }
-  });
-}
 document.addEventListener("DOMContentLoaded", async () => {
     try {
       const dojos = await safeFetchJson(getRepoRoot() + "Assets/dojo-list.json");
@@ -101,26 +92,12 @@ const SOCIAL_PLATFORMS = [
     }
 ];
 
-function renderSocialLinksAsString(dojo, lang) {
-    // Guard against a missing `links` object – return empty string early.
-    if (!dojo.links) return "";
-
-    // Reduce the platform catalogue to a single HTML string.
-    return SOCIAL_PLATFORMS.reduce((html, platform) => {
-        const url = dojo.links[platform.keyUrl];
-        const label = dojo.links[platform.keyLabel]?.[lang]; // optional chaining
-
-        // If either the URL or the label is falsy, skip this platform.
-        if (!url || !label) return html;
-        const safeHref = safeUrl(url);
-
-        // Build the anchor – we escape the URL and the label.
-        const anchor = `
-      <a class="${platform.cssClass}" href="${safeHref}" target="_blank" rel="noopener noreferrer">
-        ${platform.iconSvg ? platform.iconSvg : ""}${esc(label)}
-      <span class="sr-only">${esc(label)}</span></a>`;
-
-        // Wrap each anchor in a <p> (you can change the wrapper if you like).
-        return html + `<p>${anchor}</p>`;
-    }, "");
-};
+const dojoSelector = document.getElementById("dojoSelector");
+if (dojoSelector) {
+  document.getElementById("dojoSelector").addEventListener("change", function () {
+    const target = this.value;
+    if (target) {
+      window.location.hash = target; // scroller til sektionen
+    }
+  });
+}
