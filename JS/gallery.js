@@ -11,15 +11,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (lightbox && lightboxImg && prevBtn && nextBtn && gallery) {
     let pictures = [];
     let currentIndex = 0;
+    const isNorsk = window.location.pathname.includes("/Norsk/");
+    const lang = isNorsk ? "no" : "en";
+    const repo = "/" + location.pathname.split("/")[1] + "/";
 
     try {
       pictures = await safeFetchJson("../Assets/pictures.json"); // fjern const her
-      if (pictures) {
-        // Find sprog
-        const isNorsk = window.location.pathname.includes("/Norsk/");
-        const lang = isNorsk ? "no" : "en";
-        const repo = "/" + location.pathname.split("/")[1] + "/";
-        
+      if (pictures) {        
         pictures.forEach((pic, index) => {
           const img = document.createElement("img");
           const fullPath = pic.src.startsWith("http")
@@ -45,7 +43,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     function showImage() {
       const pic = pictures[currentIndex];
-      const repo = "/" + location.pathname.split("/")[1] + "/";
       const fullPath = pic.src.startsWith("http")
         ? pic.src
         : repo + pic.src;
@@ -86,6 +83,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
 });
+
 
 
 
