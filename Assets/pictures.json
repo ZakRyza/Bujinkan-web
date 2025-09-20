@@ -1,23 +1,24 @@
 [
     {
-      "src": "/Bujinkan-web/Pictures/budo1.webp",
+      "src": "Pictures/budo1.webp",
       "alt": {
         "no": "Trening i gamle Oslo dojo",
         "en": "Training in the old Oslo dojo"
       }
     },
     {
-      "src": "/Bujinkan-web/Pictures/budo2.webp",
+      "src": "Pictures/budo2.webp",
       "alt": {
         "no": "Bilde av Takamatsu Sensei",
         "en": "picture of Takamatsu Sensei"
       }
     },
     {
-        "src": "/Bujinkan-web/Pictures/budo3.webp",
+        "src": "Pictures/budo3.webp",
         "alt": {
           "no": "Samling av Bilde fra Takamatsu Sensei sin trening",
           "en": "Collection of picture from Takamatsu Senseis trainings"
         }
       }
   ]
+
