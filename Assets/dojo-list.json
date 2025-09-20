@@ -8,7 +8,7 @@
     },
     "map": {
       "link": "https://www.google.com/maps/place/Eikenga+17,+0597+Oslo",
-      "thumbnail": "../Pictures/oslo.webp",
+      "thumbnail": "Pictures/oslo.webp",
       "thumbnailtext": {
       "no": "Klikk for å åbne google maps",
       "en": "Click to open google maps"
@@ -58,7 +58,7 @@
     },
     "map": {
       "link": "https://www.google.com/maps/place/Ingeniør+Rybergs+Gate+101,+3027+Drammen",
-      "thumbnail": "../Pictures/drammen.webp",
+      "thumbnail": "Pictures/drammen.webp",
       "thumbnailtext": {
         "no": "Klikk for å åbne google maps",
         "en": "Click to open google maps"
