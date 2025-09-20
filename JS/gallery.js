@@ -17,19 +17,26 @@ document.addEventListener("DOMContentLoaded", async () => {
         // Find sprog
         const isNorsk = window.location.pathname.includes("/Norsk/");
         const lang = isNorsk ? "no" : "en";
+        const repo = "/" + location.pathname.split("/")[1] + "/";
 
         pictures.forEach((pic, index) => {
           const img = document.createElement("img");
-          img.src = pic.src;
+        
+          // prepend repo-roden til relative stier
+          const fullPath = pic.src.startsWith("http")
+            ? pic.src
+            : repo + pic.src;
+        
+          img.src = safeUrl(fullPath);
           img.alt = pic.alt[lang];
           img.setAttribute("oncontextmenu", "return false;");
           img.setAttribute("loading", "lazy");
-
+        
           img.addEventListener("click", () => {
             currentIndex = index;
             showImage();
           });
-
+        
           gallery.appendChild(img);
         });
       }
@@ -74,4 +81,5 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     });
   }
+
 });
