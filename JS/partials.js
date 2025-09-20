@@ -19,20 +19,24 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 
+  // find repo-root fra URL'en (altid første segment efter /)
+  const repo = "/" + location.pathname.split("/")[1] + "/"; 
+  // => "/Bujinkan-web/"
+  
   const langSwitch = document.getElementById("lang-switch");
   if (langSwitch) {
     const mapping = {
-      "/Norsk/Dojos.html": "/Engelsk/Dojos.html",
-      "/Norsk/Om.html": "/Engelsk/About.html",
-      "/Norsk/Kontakt.html": "/Engelsk/Contact.html",
-      "/Norsk/Billeder.html": "/Engelsk/Pictures.html",
-      "/Norsk/Nyheter.html": "/Engelsk/News.html",
+      [repo + "/Norsk/Dojos.html"]: [repo + "/Engelsk/Dojos.html"],
+      [repo + "/Norsk/Om.html": [repo + "/Engelsk/About.html"],
+      [repo + "/Norsk/Kontakt.html"]: [repo + "/Engelsk/Contact.html"],
+      [repo + "/Norsk/Billeder.html"]: [repo + "/Engelsk/Pictures.html"],
+      [repo + "/Norsk/Nyheter.html"]: [repo + "/Engelsk/News.html"],
 
-      "/Engelsk/Dojos.html": "/Norsk/Dojos.html",
-      "/Engelsk/About.html": "/Norsk/Om.html",
-      "/Engelsk/Contact.html": "/Norsk/Kontakt.html",
-      "/Engelsk/Pictures.html": "/Norsk/Billeder.html",
-      "/Engelsk/News.html": "/Norsk/Nyheter.html"
+      [repo + "/Engelsk/Dojos.html"]: [repo + "/Norsk/Dojos.html"],
+      [repo + "/Engelsk/About.html"]: [repo + "/Norsk/Om.html"],
+      [repo + "/Engelsk/Contact.html"]: [repo + "/Norsk/Kontakt.html"],
+      [repo + "/Engelsk/Pictures.html"]: [repo + "/Norsk/Billeder.html"],
+      [repo + "/Engelsk/News.html"]: [repo + "/Norsk/Nyheter.html"]
     };
 
     if (mapping[currentPath]) {
@@ -41,4 +45,5 @@ document.addEventListener("DOMContentLoaded", async () => {
       const safeHref = safeUrl(mapping[currentPath]);
     }
   }
+
 });
