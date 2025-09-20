@@ -26,25 +26,23 @@ document.addEventListener("DOMContentLoaded", async () => {
   const langSwitch = document.getElementById("lang-switch");
   if (langSwitch) {
     const mapping = {
-      [repo + "/Norsk/Dojos.html"]: [repo + "/Engelsk/Dojos.html"],
-      [repo + "/Norsk/Om.html"]: [repo + "/Engelsk/About.html"],
-      [repo + "/Norsk/Kontakt.html"]: [repo + "/Engelsk/Contact.html"],
-      [repo + "/Norsk/Billeder.html"]: [repo + "/Engelsk/Pictures.html"],
-      [repo + "/Norsk/Nyheter.html"]: [repo + "/Engelsk/News.html"],
+      [repo + "Norsk/Dojos.html"]: repo + "Engelsk/Dojos.html",
+      [repo + "Norsk/Om.html"]: repo + "Engelsk/About.html",
+      [repo + "Norsk/Kontakt.html"]: repo + "Engelsk/Contact.html",
+      [repo + "Norsk/Billeder.html"]: repo + "Engelsk/Pictures.html",
+      [repo + "Norsk/Nyheter.html"]: repo + "Engelsk/News.html",
 
-      [repo + "/Engelsk/Dojos.html"]: [repo + "/Norsk/Dojos.html"],
-      [repo + "/Engelsk/About.html"]: [repo + "/Norsk/Om.html"],
-      [repo + "/Engelsk/Contact.html"]: [repo + "/Norsk/Kontakt.html"],
-      [repo + "/Engelsk/Pictures.html"]: [repo + "/Norsk/Billeder.html"],
-      [repo + "/Engelsk/News.html"]: [repo + "/Norsk/Nyheter.html"]
+      [repo + "Engelsk/Dojos.html"]: repo + "Norsk/Dojos.html",
+      [repo + "Engelsk/About.html"]: repo + "Norsk/Om.html",
+      [repo + "Engelsk/Contact.html"]: repo + "Norsk/Kontakt.html",
+      [repo + "Engelsk/Pictures.html"]: repo + "Norsk/Billeder.html",
+      [repo + "Engelsk/News.html"]: repo + "Norsk/Nyheter.html"
     };
 
     if (mapping[currentPath]) {
-      langSwitch.href = mapping[currentPath];
-      langSwitch.textContent = isNorsk ? "English" : "Norsk";
       const safeHref = safeUrl(mapping[currentPath]);
+      langSwitch.href = safeHref;
+      langSwitch.textContent = isNorsk ? "English" : "Norsk";
     }
-  }
 
 });
-
