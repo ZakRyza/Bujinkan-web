@@ -19,12 +19,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         const isNorsk = window.location.pathname.includes("/Norsk/");
         const lang = isNorsk ? "no" : "en";
         const repo = "/" + location.pathname.split("/")[1] + "/";
-        const fullPath = pic.src.startsWith("http")
-          ? pic.src
-          : repo + pic.src;
         
         pictures.forEach((pic, index) => {
           const img = document.createElement("img");
+          const fullPath = pic.src.startsWith("http")
+            ? pic.src
+            : repo + pic.src;
         
           img.src = safeUrl(fullPath);
           img.alt = pic.alt[lang];
@@ -86,6 +86,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
 });
+
 
 
 
