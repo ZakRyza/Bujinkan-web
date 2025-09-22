@@ -1,0 +1,28 @@
+[
+  {
+    "id": "2025-09-14-news1",
+    "title": {
+      "no": "Bujinkan.no er oppe og kjøre",
+      "en": "Bujinkan.no is up and running"
+    },
+    "date": "2025-09-20",
+    "content": {
+      "no": [
+        "Bujinkan.er oppe og kjøre, og denne side bliver opdateret med nyheter fra de forskjellige Dojos, hvis de ønsker dette.",
+        "Dette er et eksempel på hvordan en nyhet kunne se ut"
+      ],
+      "en": [
+        "Bujinkan.no is up and running, and this site will be updated with news form the different dojos, should they want it.",
+        "This is an example of of how a piece of news could look."
+      ]
+    },
+    "thumbnail": {
+     "path": "Pictures/Logo.webp",
+      "alt": {
+        "no": "Officiel Bujinkan Logo",
+        "en": "Official Bujinkan Logo"
+      }
+    }
+  }
+
+]
