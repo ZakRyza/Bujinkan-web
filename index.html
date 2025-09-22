@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting…</title>
+  <script>
+    (function() {
+      const lang = navigator.language.toLowerCase();
+      let target = "./Norsk/Hjem.html"; // fallback = Norsk
+      if (lang.startsWith("en")) {
+        target = "./Engelsk/Home.html";
+      } else if (lang.startsWith("no")) {
+        target = "./Norsk/Hjem.html";
+      }
+      window.location.replace(target);
+    })();
+  </script>
+</head>
+<body></body>
+</html>

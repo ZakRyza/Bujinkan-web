@@ -1,9 +1,9 @@
 /*jshint esversion: 6 */
-import { esc, safeFetchJson, safeUrl, withRepo, getLang, parseTextWithLinks, formatDate } from "./util.js";
+import { esc, safeFetchJson, safeUrl, withRepo, getLang, parseTextWithLinks, formatDate, getRepoRoot } from "./util.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    const news = await safeFetchJson(withRepo("Assets/nyheter.json"));
+    const news = await safeFetchJson(getRepoRoot() + "Assets/nyheter.json");
     if (news) {
       const container = document.getElementById("news-list");
       const lang = getLang();
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-2"></div>
-                        <div class="col-8 textindhold">
+                        <div class="col-8">
                             <h2 class="dojo text-center text-white">${esc(item.title[lang])}</h2>
                         </div>
                         <div class="col-2 textindhold"> 
@@ -27,13 +27,13 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <div class="row">
                     <div class="col-2"></div>
                         <div class="col-8 flex-row-center">
-                            ${item.thumbnail ? `<img class="img-news" src="${safeUrl(withRepo(item.thumbnail.path))}" alt="${esc(item.thumbnail.alt[lang])}" loading="lazy">`: ""}
+                            ${item.thumbnail ? `<img class="img-news" src="${safeUrl(withRepo(item.thumbnail.path))}" alt="${esc(item.thumbnail.alt[lang])}" loading="lazy" oncontextmenu="return false;">`: ""}
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2 textindhold"></div>
-                        <div class="col-8 textindhold"> 
+                    <div class="col-2"></div>
+                        <div class="col-8"> 
                             ${item.content[lang].map(p => `<p>${parseTextWithLinks(p)}</p>`).join("")}
                         </div>
                     </div>

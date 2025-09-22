@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       <h2 class="headline text-center" id="${esc(dojo.id)}">${esc(dojo.name[lang])}</h2>
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-1 col-12 textindhold"></div>
-          <div class="col-md-5 col-12 textindhold">
+          <div class="col-md-1 col-12"></div>
+          <div class="col-md-5 col-12">
               <h3 class="overskrift">${lang === "no" ? "Adresse" : "Address"}</h3>
               <p class="information">${esc(dojo.address[lang])}</p>
 
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
               ${dojo.times[lang].map((t) => `<p class="information">${esc(t)}</p>`).join("")}
 
               <h3 class="overskrift">${lang === "no" ? "Kontakt" : "Contact"}</h3>
-              <p class="information">Telefon: ${esc(dojo.contact.phone)}</p>
+              <p class="information">${lang === "no" ? "Telefon" : "Phone"}: ${esc(dojo.contact.phone)}</p>
               <p class="information">Mail: <a class="linkcolor" href="mailto:${esc(dojo.contact.email)}">${esc(dojo.contact.email)}</a></p>
               ${renderSocialLinksAsString(dojo, lang)}
           </div>

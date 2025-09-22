@@ -96,3 +96,45 @@ export function formatDate(isoDate) {
   const [year, month, day] = isoDate.split("-");
   return `${day} ${month} ${year}`;
 }
+
+export function parseSafeHtml(str) {
+  if (!str) return "";
+
+  // Tillad kun et lille sæt af tags
+  const allowed = ["i", "b", "u", "em", "strong", "br"];
+
+  // Lav et DOM parser objekt
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(str, "text/html");
+
+  function sanitize(node) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      return document.createTextNode(node.textContent);
+    }
+
+    if (node.nodeType === Node.ELEMENT_NODE) {
+      const tag = node.tagName.toLowerCase();
+
+      if (!allowed.includes(tag)) {
+        // Ikke tilladt: returnér kun tekst
+        return document.createTextNode(node.textContent);
+      }
+
+      // Tilladt: lav nyt element og processér børn
+      const el = document.createElement(tag);
+      node.childNodes.forEach((child) => {
+        el.appendChild(sanitize(child));
+      });
+      return el;
+    }
+
+    return document.createTextNode(""); // fallback
+  }
+
+  const fragment = document.createDocumentFragment();
+  doc.body.childNodes.forEach((n) => {
+    fragment.appendChild(sanitize(n));
+  });
+
+  return fragment;
+}

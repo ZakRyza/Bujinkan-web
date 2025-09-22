@@ -25,14 +25,16 @@ document.addEventListener("DOMContentLoaded", async () => {
       [withRepo("Norsk/Dojos.html")]: withRepo("Engelsk/Dojos.html"),
       [withRepo("Norsk/Om.html")]: withRepo("Engelsk/About.html"),
       [withRepo("Norsk/Kontakt.html")]: withRepo("Engelsk/Contact.html"),
-      [withRepo("Norsk/Billeder.html")]: withRepo("Engelsk/Pictures.html"),
+      [withRepo("Norsk/Bilder.html")]: withRepo("Engelsk/Pictures.html"),
       [withRepo("Norsk/Nyheter.html")]: withRepo("Engelsk/News.html"),
+      [withRepo("Norsk/Hjem.html")]: withRepo("Engelsk/Home.html"),
 
       [withRepo("Engelsk/Dojos.html")]: withRepo("Norsk/Dojos.html"),
       [withRepo("Engelsk/About.html")]: withRepo("Norsk/Om.html"),
       [withRepo("Engelsk/Contact.html")]: withRepo("Norsk/Kontakt.html"),
-      [withRepo("Engelsk/Pictures.html")]: withRepo("Norsk/Billeder.html"),
-      [withRepo("Engelsk/News.html")]: withRepo("Norsk/Nyheter.html")
+      [withRepo("Engelsk/Pictures.html")]: withRepo("Norsk/Bilder.html"),
+      [withRepo("Engelsk/News.html")]: withRepo("Norsk/Nyheter.html"),
+      [withRepo("Engelsk/Home.html")]: withRepo("Norsk/Hjem.html")
     };
 
     if (mapping[currentPath]) {

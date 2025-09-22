@@ -1,0 +1,54 @@
+  {
+    "id": "Home",
+    "img": {
+      "src": "Pictures/home.webp",
+      "alt": {
+        "no": "En person bliver kastet",
+        "en": "A person getting thrown"
+      }
+    },
+    "welcome": {
+      "no": "Velkommen til Bujinkan.no",
+      "en": "Welcome to Bujinkan.no"
+    },
+    "headline1": {
+      "no": "Hva er Bujinkan?",
+      "en": "What is Bujinkan?"
+    },
+    "headline2": {
+      "no": "Hvorfor trene?",
+      "en": "Why train?"
+    },
+    "language": {
+      "no": "For English, click the button top right or in the dropdown menu",
+      "en": "For Norsk, klikk knappen øverst til høyre eller i dropdown menyen"
+    },
+    "text1": {
+      "no": [
+        "Bujinkan er en japansk kampkunst som kombinerer tradisjon og moderne selvforsvar. Treningsformen bygger på ni historiske skoler (ryuha) med fokus på balanse, fleksibilitet og naturlige bevegelser."
+      ],
+      "en": [
+        "Bujinkan is a Japanese martial art that blends tradition with modern self-defense. It is based on nine historical schools (ryuha) and emphasizes balance, flexibility, and natural movement."
+      ]
+    },
+    "text2": {
+      "no": [
+        "Der er mange fordele ved at træne Bujinkan. Nogle av disse fordele inkluderer:",
+        "Bedre styrke og smidighet",
+        "Stressmestring og konsentrasjon",
+        "Praktiske ferdigheter for selvforsvar",
+        "Innsikt og menneskelig utvikling"
+      ],
+      "en": [
+        "Through Bujinkan you will gain:",
+        "Better strength and flexibility",
+        "Stress management and concentration",
+        "Practical skills for self-defense",
+        "Insight and personal growth"
+      ]
+    },
+    "text3": {
+        "no": "Høres dette ut som noe for deg? Ta en titt på dojo-listen, som har dojoer fra forskjellige deler av landet. Vil du vite mer? Ta en titt på om-siden. Spørsmål? Ta gjerne kontakt.",
+        "en": "Does this sound like something for you? Then take a look at the dojo list, which has dojos from different parts of the country. Want to know more? Take a look at the about page. Questions? Please get in touch"
+    }
+  }
