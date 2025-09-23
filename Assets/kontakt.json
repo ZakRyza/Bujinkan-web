@@ -1,0 +1,11 @@
+{
+    "id": "kontakt",
+    "h1": {
+        "no": "Vil du gjerne ha informasjonen din opp på siden? Kontakt administrator på:",
+        "en": "Would you like to have your information posted on the site? Please contact the administrator at:"
+    },
+    "h2": {
+        "no": "Skriv hvem du er, hvor dojoen er, treningstider, kontaktinformasjon og eventuelt andre ting du gjerne vil ha med.",
+        "en": "Write who you are, where the dojo is located, training times, contact information, and anything else you would like to include."
+    }
+}

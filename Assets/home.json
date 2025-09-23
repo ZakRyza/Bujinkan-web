@@ -1,10 +1,10 @@
   {
     "id": "Home",
     "img": {
-      "src": "Pictures/home.webp",
+      "src": "Pictures/home2.webp",
       "alt": {
-        "no": "En person bliver kastet",
-        "en": "A person getting thrown"
+        "no": "Soke Dr. Hatsumi Masaaki slåss med en bo mot to personer med sverd",
+        "en": "Soke Dr. Masaaki Hatsumi fights with a bo against two people with swords"
       }
     },
     "welcome": {
@@ -20,8 +20,8 @@
       "en": "Why train?"
     },
     "language": {
-      "no": "For English, click the button top right or in the dropdown menu",
-      "en": "For Norsk, klikk knappen øverst til høyre eller i dropdown menyen"
+      "no": "For English, click the button at the top right or in the dropdown menu",
+      "en": "For norsk, klikk på knappen øverst til høyre eller i nedtrekksmenyen"
     },
     "text1": {
       "no": [
@@ -33,7 +33,7 @@
     },
     "text2": {
       "no": [
-        "Der er mange fordele ved at træne Bujinkan. Nogle av disse fordele inkluderer:",
+        "Det er mange fordeler ved å trene Bujinkan. Noen av disse fordelene inkluderer:",
         "Bedre styrke og smidighet",
         "Stressmestring og konsentrasjon",
         "Praktiske ferdigheter for selvforsvar",
@@ -48,7 +48,7 @@
       ]
     },
     "text3": {
-        "no": "Høres dette ut som noe for deg? Ta en titt på dojo-listen, som har dojoer fra forskjellige deler av landet. Vil du vite mer? Ta en titt på om-siden. Spørsmål? Ta gjerne kontakt.",
-        "en": "Does this sound like something for you? Then take a look at the dojo list, which has dojos from different parts of the country. Want to know more? Take a look at the about page. Questions? Please get in touch"
+        "no": "Høres dette ut som noe for deg? Ta en titt på dojo-listen, som har dojoer fra ulike deler av landet. Vil du vite mer? Ta en titt på Om-siden. Har du spørsmål? Ta gjerne kontakt.",
+        "en": "Does this sound like something for you? Take a look at the dojo list, which shows dojos from different parts of the country. Want to know more? Visit the About page. Questions? Feel free to get in touch."
     }
   }

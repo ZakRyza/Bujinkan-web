@@ -10,8 +10,8 @@
       "link": "https://www.google.com/maps/place/Eikenga+17,+0597+Oslo",
       "thumbnail": "Pictures/oslo.webp",
       "thumbnailtext": {
-      "no": "Klikk for å åbne google maps",
-      "en": "Click to open google maps"
+      "no": "Klikk for å åpne Google Maps",
+      "en": "Click to open Google Maps"
       },
       "alt": {
         "no": "Kort til Oslo Dojo",
@@ -39,11 +39,11 @@
     "links": {
       "homepage": {
         "no": "Besøk Budoskolens Nettside",
-        "en": "Visit Budoskolen on its Webpage"
+        "en": "Visit Budoskolen's Website"
       },
       "homepageUrl": "https://www.budoskolen.no",
       "facebook": {
-        "no": "Følg Budoskolen Oslo på Facebook",
+        "no": "Følg Budoskolen Oslo på Facebook-siden",
         "en": "Follow Budoskolen Oslo on Facebook"
       },
       "facebookUrl": "https://www.facebook.com/budoskolen/"
@@ -60,8 +60,8 @@
       "link": "https://www.google.com/maps/place/Ingeniør+Rybergs+Gate+101,+3027+Drammen",
       "thumbnail": "Pictures/drammen.webp",
       "thumbnailtext": {
-        "no": "Klikk for å åbne google maps",
-        "en": "Click to open google maps"
+        "no": "Klikk for å åpne Google Maps",
+        "en": "Click to open Google Maps"
       },
       "alt": {
         "no": "Kort til Drammen Dojo",
@@ -89,16 +89,16 @@
     "links": {
       "homepage": {
         "no": "Besøk Budoskolens Nettside",
-        "en": "Visit Budoskolen on its Webpage"
+        "en": "Visit Budoskolen's Website"
       },
       "homepageUrl": "https://www.budoskolen.no",
       "facebook": {
-        "no": "Følg Budoskolen Oslo på Facebook",
-        "en": "Follow Budoskolen Oslo on Facebook"
+        "no": "Følg Budoskolen Drammen på Facebook-siden",
+        "en": "Follow Budoskolen Drammen on Facebook"
       },
       "tiktok": {
-        "no": "Følg Budoskolen Drammen på tiktok",
-        "en": "Follow Budoskolen Drammen on tiktok"
+        "no": "Følg Budoskolen Drammen på TikTok",
+        "en": "Follow Budoskolen Drammen on TikTok"
       },
       "facebookUrl": "https://www.facebook.com/BujinkanDrammen/",
       "tiktokUrl": "https://www.tiktok.com/@bujinkan.drammen"
